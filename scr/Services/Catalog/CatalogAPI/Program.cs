@@ -1,5 +1,7 @@
 using Microsoft.CodeAnalysis.Options;
 
+using Microsoft.CodeAnalysis.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Populate DI Container
