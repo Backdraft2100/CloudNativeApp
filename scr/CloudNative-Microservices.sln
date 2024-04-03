@@ -13,6 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks.csproj", "{7E2773FE-493C-47BF-A8A0-5807745B66B9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{A4C6F574-83B8-4CD0-A22F-DA76489FA703}"
+	ProjectSection(SolutionItems) = preProject
+		Services\Catalog\CatalogDocumentation.md = Services\Catalog\CatalogDocumentation.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +40,6 @@ Global
 		{EBFE29A7-3463-4526-99CD-D4216B86B922} = {AE7F1411-7F3D-4A86-8410-5F81E4A265FE}
 		{17350816-C185-461A-B875-2745A5FA0113} = {EBFE29A7-3463-4526-99CD-D4216B86B922}
 		{7E2773FE-493C-47BF-A8A0-5807745B66B9} = {B2C80273-E514-458C-B70B-471FD7984868}
+		{A4C6F574-83B8-4CD0-A22F-DA76489FA703} = {EBFE29A7-3463-4526-99CD-D4216B86B922}
 	EndGlobalSection
 EndGlobal
