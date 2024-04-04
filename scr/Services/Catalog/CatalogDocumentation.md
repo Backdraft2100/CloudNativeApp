@@ -1,7 +1,18 @@
 # Catalog.API
 
+### Available operations
 
-### Request message
+| Operation | Use Cases | Request URI |
+| --------- | --------- | ------------- |
+| GET | List all products | /products    |
+| GET | Get products by id  | /products/{id}    |
+| GET | Get products by categroy  | /products/category    |
+| POST | [Create new product](#Create-product)  | /products  |
+| PUT | Update product  | /products/{id}  |
+| DELETE | Delete product  | /products/{id}  |
+
+
+### <a id="Create-product"></a> Request message
 ```json
 {
   "Name": "New product A",
