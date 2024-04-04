@@ -1,0 +1,24 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "Docker",
+    "dateExported": "2024-04-04T21:29:02.184Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "catalog_url",
+            "value": "https://localhost:6050"
+        },
+        {
+            "name": "basket_url",
+            "value": "https://localhost:6051"
+        },
+        {
+            "name": "discount_url",
+            "value": "https://localhost:6052"
+        },
+        {
+            "name": "ordering_url",
+            "value": "https://localhost:6053"
+        }
+    ]
+}

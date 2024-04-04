@@ -1,0 +1,24 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "localhost",
+    "dateExported": "2024-04-04T21:28:54.352Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "catalog_url",
+            "value": "https://localhost:5050"
+        },
+        {
+            "name": "basket_url",
+            "value": "https://localhost:5051"
+        },
+        {
+            "name": "discount_url",
+            "value": "https://localhost:5052"
+        },
+        {
+            "name": "ordering_url",
+            "value": "https://localhost:5053"
+        }
+    ]
+}

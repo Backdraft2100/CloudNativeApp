@@ -20,6 +20,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xtensions", "Xtensions", "{
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.override.yml = docker-compose.override.yml
 		docker-compose.yml = docker-compose.yml
+		thunder-collection_CloudNative-Microservices.json = thunder-collection_CloudNative-Microservices.json
+		thunder-environment_localhost.json = thunder-environment_localhost.json
+		thunder-environment_Docker.json = thunder-environment_Docker.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{0425D72B-F9E3-43EA-BC91-F4A7FD231F2C}"

@@ -1,0 +1,50 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CloudNative-Microservices",
+    "dateExported": "2024-04-04T21:26:18.496Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "da177f03-647d-498c-94b6-9556ee467a68",
+            "name": "Catalog.API",
+            "containerId": "",
+            "created": "2024-04-04T21:21:54.342Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "af3d3754-28e9-43a5-8146-0c56a9c5a3bb",
+            "colId": "a041f506-035f-4fad-929c-fd64931d0571",
+            "containerId": "da177f03-647d-498c-94b6-9556ee467a68",
+            "name": "AddProduct",
+            "url": "{{catalog_url}}/products",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-04T21:21:54.342Z",
+            "modified": "2024-04-04T21:26:03.610Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Name\": \"New product A\",\n  \"Category\": [\n    \"c1\",\n    \"c2\"\n  ],\n  \"Description\": \"Description product A\",\n  \"ImageFile\": \"ImageFile product A\",\n  \"Price\": 199\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0327c207-6c9b-4ab9-b3e0-35b01c9e8201",
+            "colId": "a041f506-035f-4fad-929c-fd64931d0571",
+            "containerId": "da177f03-647d-498c-94b6-9556ee467a68",
+            "name": "GetProducts",
+            "url": "{{catalog_url}}/products",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-04-04T21:21:54.343Z",
+            "modified": "2024-04-04T21:23:16.200Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
