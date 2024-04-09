@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "CloudNative-Microservices",
-    "dateExported": "2024-04-04T21:26:18.496Z",
+    "dateExported": "2024-04-09T07:41:08.932Z",
     "version": "1.1",
     "folders": [
         {
@@ -22,12 +22,31 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-04-04T21:21:54.342Z",
-            "modified": "2024-04-04T21:26:03.610Z",
+            "modified": "2024-04-09T06:56:05.708Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"Name\": \"New product A\",\n  \"Category\": [\n    \"c1\",\n    \"c2\"\n  ],\n  \"Description\": \"Description product A\",\n  \"ImageFile\": \"ImageFile product A\",\n  \"Price\": 199\n}",
+                "raw": "{\n  \"Name\": \"New product B\",\n  \"Category\": [\n    \"X1\",\n    \"c2\"\n  ],\n  \"Description\": \"Description product A\",\n  \"ImageFile\": \"ImageFile product A\",\n  \"Price\": 199\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9fb93e41-7cd8-4c42-955b-a15df5cb37bf",
+            "colId": "a041f506-035f-4fad-929c-fd64931d0571",
+            "containerId": "da177f03-647d-498c-94b6-9556ee467a68",
+            "name": "UpdateProduct",
+            "url": "{{catalog_url}}/products",
+            "method": "PUT",
+            "sortNum": 25000,
+            "created": "2024-04-09T07:37:21.259Z",
+            "modified": "2024-04-09T07:40:02.934Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"id\": \"018eaabe-335b-4484-9338-11c60402250f\",\n      \"name\": \"Update product CA\",\n      \"category\": [\n        \"c1\",\n        \"c2\",\n        \"X1\"\n      ],\n      \"description\": \"Description product CA\",\n      \"imageFile\": \"ImageFile product CA\",\n      \"price\": 299\n    }",
                 "form": []
             },
             "tests": []
@@ -45,6 +64,43 @@
             "headers": [],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "59c04959-1e15-4f45-9715-3bf0ce094943",
+            "colId": "a041f506-035f-4fad-929c-fd64931d0571",
+            "containerId": "da177f03-647d-498c-94b6-9556ee467a68",
+            "name": "GetProductById",
+            "url": "{{catalog_url}}/products/018eaabe-335b-4484-9338-11c60402250f",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-09T06:21:08.976Z",
+            "modified": "2024-04-09T06:24:00.460Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "22f6ab00-85f3-42ff-b533-45740d0beed4",
+            "colId": "a041f506-035f-4fad-929c-fd64931d0571",
+            "containerId": "da177f03-647d-498c-94b6-9556ee467a68",
+            "name": "GetProductByCategory",
+            "url": "{{catalog_url}}/products/category/X1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-04-09T06:54:47.024Z",
+            "modified": "2024-04-09T06:56:46.934Z",
+            "headers": [],
+            "params": [],
+            "tests": []
         }
-    ]
+    ],
+    "settings": {
+        "runOptions": {
+            "delay": 0,
+            "iterations": 1,
+            "runType": "parallel",
+            "concurrent": 5,
+            "dataFilePath": ""
+        }
+    }
 }
