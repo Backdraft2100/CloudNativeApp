@@ -9,7 +9,7 @@ public class GetProductByIdEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/products/{id}", async (Guid Id, ISender sender) =>
+        app.MapGet(Constants.Routes.GetProductsById, async (Guid Id, ISender sender) =>
         {
             var result = await sender.Send(new GetProductByIdQuery(Id));
 

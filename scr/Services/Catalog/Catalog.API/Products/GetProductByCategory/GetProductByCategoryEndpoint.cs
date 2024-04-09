@@ -1,5 +1,4 @@
-﻿
-namespace Catalog.API.GetProductsByCategory;
+﻿namespace Catalog.API.GetProductsByCategory;
 
 // public record GetProductByCategoryRequest(string Category) : IQuery<GetProductByCategoryRequest>;
 
@@ -9,7 +8,7 @@ public class GetProductByCategoryEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/products/category/{category}", async (string Category, ISender sender) =>
+        app.MapGet(Constants.Routes.GetProductsByCategory, async (string Category, ISender sender) =>
         {
             var result = await sender.Send(new GetProductByCategoryQuery(Category));
 
