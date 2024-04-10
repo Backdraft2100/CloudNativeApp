@@ -1,13 +1,10 @@
-﻿
-
-
-namespace Catalog.API.GetProduct;
+﻿namespace Catalog.API.GetProduct;
 
 public record GetProductsQuery(int? PageNumber = 1, int? PageSize = 10) : IQuery<GetProductsResult>;
 
 public record GetProductsResult(IEnumerable<Product> Products);
 
-internal class GetProductsQueryHandler(IDocumentSession session, ILogger<GetProductsQueryHandler> logger)
+internal class GetProductsQueryHandler(IDocumentSession session)
     : IQueryHandler<GetProductsQuery, GetProductsResult>
 {
     public async Task<GetProductsResult> Handle(GetProductsQuery query, CancellationToken cancellationToken)
