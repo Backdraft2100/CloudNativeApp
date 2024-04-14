@@ -28,7 +28,25 @@
 ### <a id="Store-ShoppingCart"></a> Request message
 ```json
 {
-  
+  "Cart": {
+    "UserName": "TheUserName",
+    "Items": [
+      {
+        "Quantity": 2,
+        "Color": "Red",
+        "Price": 500,
+        "ProductId": "5334c996-8457-4cf0-815c-ed2b77c4ff61",
+        "ProductName": "IPhone X"
+      },
+      {
+        "Quantity": 1,
+        "Color": "Blue",
+        "Price": 500,
+        "ProductId": "c67d6323-e8b1-4bdf-9a75-b0d0d2e7e914",
+        "ProductName": "Samsung 10"
+      }
+    ]
+  }
 }
 ```
 
