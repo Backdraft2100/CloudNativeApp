@@ -30,11 +30,11 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTPS_PORTS=8081
       - ConnectionStrings__Database=Server=catalogdb;Port=5432;Database=CatalogDb;User Id=postgres;Password=postgres;Include Error Detail=true
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/1A64ADF31C4E6D1EBA06571FDFCFE6032EB6A736.pfx
     depends_on:
       - catalogdb
     ports:
       - "6060:8081"
     volumes:
-      - ~/.aspnet/https:/https:ro
+      - ~/.dotnet/corefx/cryptography/x509stores/my:/https:ro
