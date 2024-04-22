@@ -44,3 +44,19 @@ services:
       - "6060:8081"
     volumes:
       - ~/.dotnet/corefx/cryptography/x509stores/my:/https:ro
+
+  basket.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionStrings__Database=Server=basketdb;Port=5432;Database=BasketDb;User Id=postgres;Password=postgres;Include Error Detail=true
+      - ConnectionStrings__Redis=distributedcache:6379
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/1A64ADF31C4E6D1EBA06571FDFCFE6032EB6A736.pfx
+    depends_on:
+      - basketdb
+      - distributedcache
+    ports:
+      - "6061:8081"
+    volumes:
+      - ~/.dotnet/corefx/cryptography/x509stores/my:/https:ro
