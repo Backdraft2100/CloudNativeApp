@@ -44,24 +44,33 @@
 ```plantuml
 @startuml
 !theme amiga
-package "Presentation" {
+skinparam linetype ortho
+Top to bottom direction
+rectangle "Presentation" {
+package "Web services" {
   HTTPS - [ORDERING.API]
+}
+}
+rectangle "App server" {
+together {
+package "Domain Model Layer" {
+  [Domain entities]
+  [Domain Services]
 }
 
 package "Application Layer" {
   FTP - [Application Services]
 }
 
-package "Domain Model Layer" {
-  [Domain entities]
-  [Domain Services]
-}
 
+}
 package "Infrastructure Layer" {
   [Repositories]
 }
+}
 
 [Presentation] --> [Application Layer]
+[Application Layer] -[dashed]-> [Infrastructure Layer]
 [Application Layer] --> [Domain Model Layer]
 [Infrastructure Layer] --> [Domain Model Layer]
 
