@@ -37,7 +37,7 @@ services:
       - ASPNETCORE_HTTPS_PORTS=8081
       - ConnectionStrings__Database=Server=catalogdb;Port=5432;Database=CatalogDb;User Id=postgres;Password=postgres;Include Error Detail=true
       - ASPNETCORE_Kestrel__Certificates__Default__Password=
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/1A64ADF31C4E6D1EBA06571FDFCFE6032EB6A736.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/361CE3130C926E912B37F4448321C37ADAB9F09F.pfx
     depends_on:
       - catalogdb
     ports:
@@ -52,11 +52,23 @@ services:
       - ConnectionStrings__Database=Server=basketdb;Port=5432;Database=BasketDb;User Id=postgres;Password=postgres;Include Error Detail=true
       - ConnectionStrings__Redis=distributedcache:6379
       - ASPNETCORE_Kestrel__Certificates__Default__Password=
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/1A64ADF31C4E6D1EBA06571FDFCFE6032EB6A736.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/361CE3130C926E912B37F4448321C37ADAB9F09F.pfx
     depends_on:
       - basketdb
       - distributedcache
     ports:
       - "6061:8081"
+    volumes:
+      - ~/.dotnet/corefx/cryptography/x509stores/my:/https:ro
+
+  discount.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionStrings__Database=Server=Data Source=discountdb
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/361CE3130C926E912B37F4448321C37ADAB9F09F.pfx
+    ports:
+      - "6062:8081"
     volumes:
       - ~/.dotnet/corefx/cryptography/x509stores/my:/https:ro
