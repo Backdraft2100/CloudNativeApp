@@ -38,6 +38,14 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "type": "shell",
+            "label": "Compose: up",
+            "command": "docker compose up -d",
+            "options": {
+                "cwd": "{workspaceFolder}/scr"
+            }
+        },
+        {
             "type": "docker-build",
             "label": "docker-build: debug",
             "dependsOn": [
