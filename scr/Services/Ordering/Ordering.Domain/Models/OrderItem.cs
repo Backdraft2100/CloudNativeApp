@@ -2,7 +2,7 @@ namespace Ordering.Domain.Models;
 
 public class OrderItem : Entity<OrderItemId>
 {
-    public OrderItem(OrderId orderId, ProductId producId, int quantity, decimal price)
+    internal OrderItem(OrderId orderId, ProductId producId, int quantity, decimal price)
     {
         Id=OrderItemId.Of(Guid.NewGuid());
         OrderId = orderId;
@@ -10,7 +10,6 @@ public class OrderItem : Entity<OrderItemId>
         Quantity = quantity;
         Price = price;
     }
-
 
     public OrderId OrderId { get; private set;} =default!;
     public ProductId ProducId { get; private set; } =default!;
