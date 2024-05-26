@@ -1,9 +1,10 @@
 namespace Ordering.Domain.Models;
 
-public class OrderItem : Entity<Guid>
+public class OrderItem : Entity<OrderItemId>
 {
-    public OrderItem(Guid orderId, Guid producId, int quantity, decimal price)
+    public OrderItem(OrderId orderId, ProductId producId, int quantity, decimal price)
     {
+        Id=OrderItemId.Of(Guid.NewGuid());
         OrderId = orderId;
         ProducId = producId;
         Quantity = quantity;
@@ -11,8 +12,8 @@ public class OrderItem : Entity<Guid>
     }
 
 
-    public Guid OrderId { get; private set;} =default!;
-    public Guid ProducId { get; private set; } =default!;
+    public OrderId OrderId { get; private set;} =default!;
+    public ProductId ProducId { get; private set; } =default!;
     public int Quantity { get; private set; } =default!;
     public decimal Price { get; private set; } =default!;
 }
