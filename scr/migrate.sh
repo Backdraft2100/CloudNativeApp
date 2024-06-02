@@ -1,0 +1,1 @@
+dotnet-ef migrations add --output-dir  Services/Ordering/Ordering.Infrastructure/Data/Migrations --project Services/Ordering/Ordering.Infrastructure  --startup-project Services/Ordering/Ordering.API Initial
