@@ -5,6 +5,9 @@ services:
     basketdb:
         image: postgres:16.2-alpine
 
+    orderdb:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+
     distributedcache:
         image: redis:alpine3.19
 
